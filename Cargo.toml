@@ -1,0 +1,17 @@
+[package]
+name = "discord_mc_playercount"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+serenity = { version = "0.12.4", default-features = false, features = [
+    "client",
+    "gateway",
+    "rustls_backend",
+    "model",
+] }
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
+dotenvy = "0.15.7"
+serde = { version = "1.0", features = ["derive"] }
+elytra-ping = "5.1.0"
+toml = "0.8.21"
