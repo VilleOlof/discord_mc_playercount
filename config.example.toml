@@ -1,11 +1,21 @@
+[discord]
 # The discord bots token from the developer portal
 token = "<token>"
 # The discord channel id on which to change the name to reflect the players online
 # (Right click on a channel and copy channel id, have to turn on developer settings)
 channel_id = 1234567890
+
+[minecraft]
 # The Minecraft servers IP adress
 ip = "example.com"
 # The port of the Minecraft server
 port = 25565
 # The interval for how often it should refresh the count
 interval = 30
+
+[format]
+# The channel name format to display
+# available variables: $ONLINE, $MAX
+online = "👥 Online $ONLINE/$MAX"
+# The channel name for when the Minecraft server cant be pinged  
+offline = "🔴 Server is down"
