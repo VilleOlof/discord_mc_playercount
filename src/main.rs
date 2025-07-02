@@ -23,6 +23,7 @@ struct ConfigMinecraft {
 struct ConfigFormat {
     online: String,
     offline: String,
+    status: String,
 }
 
 #[derive(Debug, Deserialize)]
@@ -59,9 +60,9 @@ struct Handler;
 impl EventHandler for Handler {
     async fn ready(&self, ctx: Context, ready: Ready) {
         println!("{} is connected!", ready.user.name);
-        ctx.set_activity(Some(ActivityData::playing("Create For Fan")));
-
         let config: Config = toml::from_str(&read_to_string(Config::PATH).unwrap()).unwrap();
+
+        ctx.set_activity(Some(ActivityData::playing(config.format.status)));
 
         let ping_timeout = Duration::from_secs(20);
 

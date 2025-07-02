@@ -19,3 +19,5 @@ interval = 30
 online = "👥 Online $ONLINE/$MAX"
 # The channel name for when the Minecraft server cant be pinged  
 offline = "🔴 Server is down"
+# The bot status "Playing x"
+status = "Minecraft"
